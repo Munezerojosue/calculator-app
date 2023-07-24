@@ -26,6 +26,9 @@
     font-size: 20px;
     font-family :Georgia, 'Times New Roman', Times, serif
 }
+ form input:hover{
+    background-color:  rgb(108, 37, 88);
+}
 form .display .disply{
     display: flex;
     flex-direction: row;
@@ -36,7 +39,6 @@ form .display .disply{
     text-align: right;
     font-size: 45px;
     border-style: none;
-
 }
 form .display .delete{
     display: flex;
@@ -44,12 +46,18 @@ form .display .delete{
    background-color: red;
    width: 75px;
 }
+form .display .delete:hover{
+    background-color: rgb(199, 7, 7);
+}
 .display{
     display: flex;
 }
 form input.equal{
     width: 140px;
     background-color: red;
+}
+form input.equal:hover{
+    background-color: rgb(199, 7, 7);
 }
 form input.star{
     width: 75px;
