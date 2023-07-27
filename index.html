@@ -2,40 +2,56 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <script type="text/javascript">
+
+            function updateresultvalue(number){
+                document.getElementById("result-area").value+= number
+
+            }
+                
+                function calculate(){
+                let operation = document.getElementById("result-area").value
+                let result = eval(operation)
+                document.getElementById("result-area").value = result
+            }
+             
+            
+
+        </script>
     </head>
     <body>
         <div class="container">
             <div class="body">
 
                 <form>
-                    <div class="display">
-                        <input type="text" name="display" class="disply">
+                    <div class="display" >
+                        <input type="text" name="display" class="disply" id="result-area">
                         <input type="button" value="CE" class="delete" onclick= "display.value = '' ">
                     </div>
                     
                     <div >
-                        <input type="button" value="1"onclick="display.value +='1' ">
-                        <input type="button" value="2"onclick="display.value +='2' ">
-                        <input type="button" value="3" onclick="display.value +='3'">
-                        <input type="button" value="/" onclick="display.value +='/'" class="slash">
+                        <input type="button"  value="1"onclick="updateresultvalue(1)">
+                        <input type="button" value="2"onclick="updateresultvalue(2)">
+                        <input type="button" value="3"onclick="updateresultvalue(3)">
+                        <input type="button" value="/"onclick="updateresultvalue('/') "class="slash">
                     </div>
                     <div>
-                        <input type="button" value="4"onclick="display.value +='4'">
-                        <input type="button" value="5"onclick="display.value +='5'">
-                        <input type="button" value="6"onclick="display.value +='6'">
-                        <input type="button" value="-"onclick="display.value +='-'" class="minus">
+                        <input type="button" value="4"onclick="updateresultvalue(4)">
+                        <input type="button" value="5"onclick="updateresultvalue(5)">
+                        <input type="button" value="6"onclick="updateresultvalue(6)">
+                        <input type="button" value="-"onclick="updateresultvalue('-')" class="minus">
                     </div>
                     <div>
-                        <input type="button" value="7"onclick="display.value +='7'">
-                        <input type="button" value="8"onclick="display.value +='8'">
-                        <input type="button" value="9"onclick="display.value +='9'">
-                        <input type="button" value="+"onclick="display.value +='+'" class="plus">
+                        <input type="button" value="7"onclick="updateresultvalue(7)">
+                        <input type="button" value="8"onclick="updateresultvalue(8)">
+                        <input type="button" value="9"onclick="updateresultvalue(9)">
+                        <input type="button" value="+"onclick="updateresultvalue('+')" class="plus">
                     </div>
                     <div>
-                        <input type="button" value="."onclick="display.value +='.'">
-                        <input type="button" value="0"onclick="display.value +='0'">
-                        <input type="button" value="="onclick="display.value =eval(display.value)" class="equal">
-                        <input type="button" value="*"onclick="display.value +='*'" class="star">
+                        <input type="button" value="."onclick="updateresultvalue(.)">
+                        <input type="button" value="0"onclick="updateresultvalue(0)">
+                        <input type="button" value="="onclick="calculate()" class="equal">
+                        <input type="button" value="*"onclick="updateresultvalue('*')" class="star">
                     </div>
 
 
