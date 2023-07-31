@@ -6,17 +6,29 @@
 
             function updateresultvalue(number){
                 document.getElementById("result-area").value+= number
-
             }
-                
                 function calculate(){
                 let operation = document.getElementById("result-area").value
                 let result = eval(operation)
-                document.getElementById("result-area").value = result
-            }
-             
+                
+                     document.getElementById("result-area").value = result
             
+                
+                }
+            
+            function deleteall(){
+                let operation = document.getElementById("result-area").value
+                let resalt = operation='';
+                document.getElementById("result-area").value = resalt
+            
+            }
+            function deleting(){
+                let operation = document.getElementById("result-area").value
+                let resalt = operation=operation.slice(0,-1);
+                document.getElementById("result-area").value = resalt
+            }
 
+        
         </script>
     </head>
     <body>
@@ -26,7 +38,7 @@
                 <form>
                     <div class="display" >
                         <input type="text" name="display" class="disply" id="result-area">
-                        <input type="button" value="CE" class="delete" onclick= "display.value = '' ">
+                        <input type="button" value="CE" class="clear" id="clea1" onclick="deleteall()">
                     </div>
                     
                     <div >
@@ -47,10 +59,11 @@
                         <input type="button" value="9"onclick="updateresultvalue(9)">
                         <input type="button" value="+"onclick="updateresultvalue('+')" class="plus">
                     </div>
-                    <div>
-                        <input type="button" value="."onclick="updateresultvalue(.)">
+                    <div class="last">
+                        <input type="button" value="."onclick="updateresultvalue('.')">
                         <input type="button" value="0"onclick="updateresultvalue(0)">
                         <input type="button" value="="onclick="calculate()" class="equal">
+                        <input type="button" value="DEL"onclick= "deleting()" class="delete2">
                         <input type="button" value="*"onclick="updateresultvalue('*')" class="star">
                     </div>
 

@@ -30,6 +30,9 @@
  form input:hover{
     background-color:  rgb(108, 37, 88);
 }
+form input:active{
+    transform:translateY(0.1em);
+}
 form .display .disply{
     display: flex;
     flex-direction: row;
@@ -41,24 +44,52 @@ form .display .disply{
     font-size: 45px;
     border-style: none;
 }
-form .display .delete{
+form .display .clear{
     display: flex;
     justify-content: center;
    background-color: red;
    width: 75px;
 }
-form .display .delete:hover{
+form .last .delete2{
+    display: flex;
+    justify-content: center;
+   background-color: red;
+   width: 67px;
+   
+}
+form .last .delete2:hover{
     background-color: rgb(199, 7, 7);
+}
+form .last .delete2:active{
+    transform:translateY(0.1em);
+}
+form .last{
+    display: flex;
+    
+}
+form .display .clear:hover{
+    background-color: rgb(199, 7, 7);
+}
+form .display .clear:active{
+    transform:translateY(0.1em);
 }
 .display{
     display: flex;
 }
 form input.equal{
-    width: 140px;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+   background-color: red;
+   width: 67px;
+   margin-left: 10px;
+
+    
 }
 form input.equal:hover{
     background-color: rgb(199, 7, 7);
+}
+form input.equal:active{
+    transform:translateY(0.1em);
 }
 form input.star{
     width: 75px;
